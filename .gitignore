@@ -1,0 +1,47 @@
+# =============================================================================
+# .gitignore — files Git must NOT track for Charlie MJ Instagram Post Editor
+# =============================================================================
+
+# --- Dependencies -------------------------------------------------------------
+# Re-created by running `npm install`. Hundreds of MB, never commit.
+node_modules/
+
+# --- Build output -------------------------------------------------------------
+# electron-builder writes the portable .exe and the unpacked app here.
+# Publish the .exe through GitHub Releases instead of committing it
+# (GitHub rejects single files larger than 100 MB).
+dist/
+out/
+*.exe
+*.7z
+*.zip
+
+# --- Package-manager logs -----------------------------------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+
+# --- Portable-mode user data --------------------------------------------------
+# The portable app creates this folder next to the .exe to store its settings.
+CharlieMJ-Data/
+
+# --- Editor / IDE settings ----------------------------------------------------
+.vscode/
+.idea/
+*.swp
+
+# --- Operating-system junk ----------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Local secrets (never commit) --------------------------------------------
+.env
+.env.*
+
+# --- Private / scratch files --------------------------------------------------
+# Put personal test photos in a folder called "private/" and they stay local.
+private/
+scratch/
+*.log

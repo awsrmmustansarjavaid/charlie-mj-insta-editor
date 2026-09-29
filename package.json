@@ -1,0 +1,29 @@
+{
+  "name": "charlie-mj-instagram-post-editor",
+  "version": "1.0.0",
+  "description": "Portable Windows editor that prepares photos for Instagram (4:5, 1:1, 1.91:1, 9:16) without losing quality.",
+  "author": "Charlie MJ",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --x64"
+  },
+  "devDependencies": {
+    "electron": "44.4.5",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.charliemj.instagrampostEditor",
+    "productName": "Charlie MJ Instagram Post Editor",
+    "artifactName": "Charlie-MJ-Instagram-Post-Editor-Portable.exe",
+    "directories": { "output": "dist", "buildResources": "build" },
+    "files": ["main.js", "preload.js", "src/**/*", "assets/icons/**/*", "assets/sample/**/*"],
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "portable": { "requestExecutionLevel": "user" }
+  }
+}
